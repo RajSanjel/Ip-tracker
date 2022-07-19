@@ -1,9 +1,11 @@
+import { useState } from "react";
 import "../css/ipinfo.css";
 import Map from "../components/Map";
 import "../css/map.css";
-function Ipinfo({ ip, postalCode, timezone, isp, lng, lat, city }) {
+function Ipinfo({ Newip, postalCode, timezone, isp, lng, lat, city }) {
+  const [isNewMap, setIsNewMap] = useState(false);
   const info = {
-    ip: ` ${ip}`,
+    ip: ` ${Newip}`,
     location: {
       city: `${city}`,
       lat: `${lat}`,

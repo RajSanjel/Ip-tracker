@@ -10,6 +10,7 @@ function Header() {
   const [postalCode, setPostalCode] = useState("NY 10001");
   const [timezone, setTimezone] = useState("-05:00");
   const [isp, setIsp] = useState("SpaceX Starlink");
+  const [sendIp, setSendIp] = useState("");
 
   function ValidateIPaddress(ipaddress) {
     if (
@@ -61,15 +62,17 @@ function Header() {
                 setTimezone(res.location.timezone);
                 setIsp(res.isp);
                 setLng(res.location.lng);
-                setLng(res.location.lat);
+                setLat(res.location.lat);
                 setCity(res.location.city);
+              } else {
+                alert("invalid ip address");
               }
             }}
           />
         </form>
       </header>
       <Ipinfo
-        ip={ValidateIPaddress(ip) ? `${ip}` : "Invalid IP"}
+        Newip={ValidateIPaddress(ip) ? `${ip}` : "192.212.174.101"}
         lat={lat}
         lng={lng}
         city={city}
