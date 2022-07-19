@@ -3,8 +3,7 @@ import L from "leaflet";
 import markerImg from "../images/icon-location.svg";
 
 export default function Map({ lat, lng }) {
-  //   const position = [51.505, -0.09];
-  const position = [lat, lng];
+  const position = [Number(lat), Number(lng)];
   const myIcon = L.icon({
     iconUrl: `${markerImg}`,
     iconSize: [32],

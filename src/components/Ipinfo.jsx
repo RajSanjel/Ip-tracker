@@ -1,35 +1,19 @@
 import "../css/ipinfo.css";
 import Map from "../components/Map";
 import "../css/map.css";
-function Ipinfo() {
+function Ipinfo({ ip, postalCode, timezone, isp, lng, lat, city }) {
   const info = {
-    ip: "0.0.0.0",
+    ip: ` ${ip}`,
     location: {
-      country: "US",
-      region: "California",
-      city: "Mountain View",
-      lat: 37.38605,
-      lng: -122.08385,
-      postalCode: "94035",
-      timezone: "-07:00",
-      geonameId: 5375480,
+      city: `${city}`,
+      lat: `${lat}`,
+      lng: `${lng}`,
+      postalCode: `${postalCode}`,
+      timezone: `${timezone}`,
     },
-    domains: [
-      "21vek-api-445.21vek-dev.by",
-      "m.21vek-445.21vek-dev.by",
-      "www.21vek-448.21vek-dev.by",
-      "www.sxwrzwq.com",
-      "www.taishanbaihe.vip",
-    ],
-    as: {
-      asn: 15169,
-      name: "GOOGLE",
-      route: "8.8.8.0/24",
-      domain: "https://about.google/intl/en/",
-      type: "Content",
-    },
-    isp: "Google LLC",
+    isp: `${isp}`,
   };
+
   return (
     <main>
       <div className="info-container">
