@@ -1,0 +1,61 @@
+@use "./variables/color"as *;
+
+main {
+    display: block;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .info-container {
+        position: absolute;
+        top: -9rem;
+        z-index: 500;
+
+        background-color: white;
+        width: 80%;
+        height: fit-content;
+        border-radius: 10px;
+        box-shadow: 0px 0px 100px -10px gray;
+        padding: 1.5em;
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+        flex-direction: column;
+
+        p {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            font-weight: 700;
+            color: $very-dark-gray;
+            font-size: $font-size;
+            gap: .3em;
+            text-align: left;
+
+            .info-heading {
+                color: $dark-gray;
+                text-transform: uppercase;
+                font-size: .7rem;
+            }
+        }
+    }
+
+    @media (min-width:1200px) {
+        .info-container {
+            text-align: left;
+            flex-direction: row;
+            justify-content: center;
+            width: 70em;
+            top: -2.5em;
+
+            p {
+                border-right: 1px solid rgba(128, 128, 128, 0.227);
+                padding: 0 30px 0 0;
+                align-items: normal;
+                margin-right: 2em;
+            }
+        }
+
+    }
+}

@@ -1,7 +1,7 @@
 @use './variables/color'as *;
 
 header {
-    height: 20rem;
+    height: 20em;
     display: flex;
     align-content: center;
     flex-direction: column;
@@ -29,12 +29,16 @@ header {
             font-size: $font-size;
         }
 
-        img {
+        button {
             position: absolute;
             background-color: black;
+            width: 3.5em;
+            background-image: url('../images/icon-arrow.svg');
+            background-position: center;
+            background-repeat: no-repeat;
             position: absolute;
             right: 0;
-            padding: 1.3em 1.5em;
+            height: 100%;
         }
 
     }
@@ -43,5 +47,13 @@ header {
         color: white;
         font-size: 1.6rem;
         font-weight: 500;
+    }
+
+    @media (min-width:1200px) {
+        height: 14em;
+
+        .ip_input {
+            width: 35em;
+        }
     }
 }

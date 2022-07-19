@@ -11,5 +11,12 @@
 
 body {
     min-width: 100vw;
-    min-height: 130vh;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+@media (max-width:460px) {
+    ::placeholder {
+        font-size: .8rem;
+    }
 }

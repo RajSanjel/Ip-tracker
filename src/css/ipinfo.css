@@ -1,0 +1,54 @@
+main {
+  display: block;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .info-container {
+  position: absolute;
+  top: -9rem;
+  z-index: 500;
+  background-color: white;
+  width: 80%;
+  height: fit-content;
+  border-radius: 10px;
+  box-shadow: 0px 0px 100px -10px gray;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+  flex-direction: column;
+}
+main .info-container p {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 17%);
+  font-size: 1.125rem;
+  gap: 0.3em;
+  text-align: left;
+}
+main .info-container p .info-heading {
+  color: hsl(0deg, 0%, 59%);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+@media (min-width: 1200px) {
+  main .info-container {
+    text-align: left;
+    flex-direction: row;
+    justify-content: center;
+    width: 70em;
+    top: -2.5em;
+  }
+  main .info-container p {
+    border-right: 1px solid rgba(128, 128, 128, 0.227);
+    padding: 0 30px 0 0;
+    align-items: normal;
+    margin-right: 2em;
+  }
+}
+
+/*# sourceMappingURL=ipinfo.css.map */
