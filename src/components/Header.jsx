@@ -10,7 +10,6 @@ function Header() {
   const [postalCode, setPostalCode] = useState("NY 10001");
   const [timezone, setTimezone] = useState("-05:00");
   const [isp, setIsp] = useState("SpaceX Starlink");
-  const [sendIp, setSendIp] = useState("");
 
   function ValidateIPaddress(ipaddress) {
     if (
